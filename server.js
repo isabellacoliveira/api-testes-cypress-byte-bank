@@ -91,7 +91,7 @@ server.post("/public/login", (req, res) => {
   res.status(200).json({ access_token, user });
 });
 
-server.use(/^(?!\/(public|trasacoes|saldo)).*$/, (req, res, next) => {
+server.use(/^(?!\/(public|transacoes|saldo)).*$/, (req, res, next) => {
   if (
     req.headers.authorization === undefined ||
     req.headers.authorization.split(" ")[0] !== "Bearer"
