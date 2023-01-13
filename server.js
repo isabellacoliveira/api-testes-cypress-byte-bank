@@ -40,7 +40,7 @@ server.post("/public/cadastrar", (req, res) => {
 
   if (emailExiste(email)) {
     const status = 401;
-    const message = "E-email já cadastrado!";
+    const message = "E-mail já cadastrado!";
     res.status(status).json({ status, message });
   }
 
